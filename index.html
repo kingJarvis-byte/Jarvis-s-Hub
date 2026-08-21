@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JARVIS HUB</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="scanline"></div>
+
+  <header class="topbar">
+    <div class="brand" id="jarvisLogo" title="JARVIS">J<span>ARVIS</span></div>
+    <div class="system-status"><i></i> SYSTEM ONLINE</div>
+    <div id="clock">--:--:--</div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <p class="eyebrow">PERSONAL COMMAND CENTRE</p>
+        <h1>JARVIS <span>HUB</span></h1>
+        <p class="subtitle">Gaming. Music. Projects. Random stuff I decided to build.</p>
+      </div>
+      <div class="date-card">
+        <span id="date">LOADING DATE...</span>
+        <strong id="greeting">WELCOME BACK.</strong>
+        <small id="statusMessage">STATUS: probably procrastinating</small>
+      </div>
+    </section>
+
+    <section class="grid">
+      <article class="panel feature" data-page="gaming">
+        <div class="icon">🎮</div>
+        <p class="tag">01 / GAMING</p>
+        <h2>Gaming</h2>
+        <p>Fortnite, Minecraft, Pokémon, retro games and whatever I'm playing right now.</p>
+        <button>OPEN →</button>
+      </article>
+
+      <article class="panel feature" data-page="creator">
+        <div class="icon">🎬</div>
+        <p class="tag">02 / CREATOR</p>
+        <h2>Creator</h2>
+        <p>YouTube, videos, shorts and the projects currently cooking.</p>
+        <button>OPEN →</button>
+      </article>
+
+      <article class="panel feature" data-page="music">
+        <div class="icon">🎵</div>
+        <p class="tag">03 / MUSIC</p>
+        <h2>Music</h2>
+        <p>Minimal Threat, songs, recordings and musical experiments.</p>
+        <button>OPEN →</button>
+      </article>
+
+      <article class="panel feature" data-page="projects">
+        <div class="icon">🧪</div>
+        <p class="tag">04 / PROJECTS</p>
+        <h2>Projects</h2>
+        <p>Websites, experiments, builds and all the unnecessary stuff I make.</p>
+        <button>OPEN →</button>
+      </article>
+    </section>
+
+    <section class="lower-grid">
+      <article class="panel profile">
+        <p class="tag">PROFILE</p>
+        <div class="profile-row">
+          <div class="avatar">J</div>
+          <div>
+            <h2>JARVIS</h2>
+            <p>Gamer · Creator · Musician · Professional overthinker</p>
+          </div>
+        </div>
+        <div class="stats">
+          <div><strong>13</strong><span>LEVEL</span></div>
+          <div><strong>07</strong><span>PROJECTS</span></div>
+          <div><strong>∞</strong><span>IDEAS</span></div>
+        </div>
+      </article>
+
+      <article class="panel tracker">
+        <p class="tag">PROJECT STATUS</p>
+        <div class="project-line"><span>🟢 JARVIS HUB</span><b>BUILDING</b></div>
+        <div class="project-line"><span>🟢 SOUNDBOARD</span><b>ONLINE</b></div>
+        <div class="project-line"><span>🟡 NEXT VIDEO</span><b>COOKING...</b></div>
+        <div class="project-line"><span>🔴 HOMEWORK</span><b>QUESTIONABLE</b></div>
+      </article>
+    </section>
+
+    <section class="panel now-playing">
+      <div>
+        <p class="tag">CURRENTLY</p>
+        <h2 id="currently">Building the Hub.</h2>
+        <p id="currentlySub">This website is about to become unnecessarily over-engineered.</p>
+      </div>
+      <div class="meter"><span></span></div>
+    </section>
+  </main>
+
+  <footer>
+    <span>JARVIS HUB // v1.0</span>
+    <span>BUILT FOR NO REASON OTHER THAN IT'S COOL</span>
+  </footer>
+
+  <div id="toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>
