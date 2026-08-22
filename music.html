@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music // JARVIS Hub</title>
+  <link rel="stylesheet" href="music.css">
+</head>
+<body>
+  <header>
+    <a href="index.html" class="logo">J<span>ARVIS</span></a>
+    <div class="system-status"><i></i> MUSIC SYSTEM // ONLINE</div>
+    <a href="index.html" class="back">← HUB</a>
+  </header>
+
+  <main>
+    <p class="eyebrow">03 / MUSIC</p>
+    <section class="hero">
+      <div>
+        <h1>Music</h1>
+        <p>Minimal Threat, songs, recordings and musical experiments.</p>
+      </div>
+      <div class="hero-badge">MINIMAL<br>THREAT</div>
+    </section>
+
+    <section class="player">
+      <div class="player-top">
+        <div>
+          <p class="tiny">NOW PLAYING</p>
+          <h2 id="nowTitle">Nothing playing</h2>
+          <p id="nowArtist">Minimal Threat</p>
+        </div>
+        <div id="playState" class="state">READY</div>
+      </div>
+
+      <div class="progress-wrap">
+        <span id="currentTime">0:00</span>
+        <input id="progress" type="range" min="0" max="100" value="0">
+        <span id="duration">0:00</span>
+      </div>
+
+      <div class="controls">
+        <button id="prev" title="Previous">◀</button>
+        <button id="play" class="play-button" title="Play/Pause">▶</button>
+        <button id="next" title="Next">▶</button>
+        <label class="volume">VOL <input id="volume" type="range" min="0" max="1" step="0.01" value="0.85"></label>
+      </div>
+
+      <audio id="audio" preload="metadata"></audio>
+    </section>
+
+    <section class="library">
+      <div class="section-head">
+        <div>
+          <p class="tiny">TRACK LIBRARY</p>
+          <h2>Minimal Threat</h2>
+        </div>
+        <span id="trackCount">05 TRACKS</span>
+      </div>
+      <div id="tracks"></div>
+    </section>
+
+    <section class="info-grid">
+      <div>
+        <p class="tiny">PROJECT</p>
+        <h3>Minimal Threat</h3>
+        <p>Original songs, experiments and recordings.</p>
+      </div>
+      <div>
+        <p class="tiny">STATUS</p>
+        <h3>ACTIVE</h3>
+        <p>More tracks can be added to the library later.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>JARVIS HUB // MUSIC SYSTEM</footer>
+  <script src="music.js"></script>
+</body>
+</html>
