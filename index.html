@@ -5,6 +5,71 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>JARVIS HUB</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+#jarvis-ai {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 9999;
+    font-family: Arial, sans-serif;
+}
+
+#jarvis-button {
+    background: #111827;
+    color: #00eaff;
+    border: 2px solid #00eaff;
+    border-radius: 12px;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(0, 234, 255, 0.4);
+}
+
+#jarvis-button:hover {
+    box-shadow: 0 0 25px rgba(0, 234, 255, 0.8);
+}
+
+#jarvis-panel {
+    display: none;
+    position: absolute;
+    bottom: 60px;
+    right: 0;
+    width: 320px;
+    padding: 20px;
+    background: #0b1120;
+    border: 2px solid #00eaff;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(0, 234, 255, 0.35);
+    color: white;
+}
+
+#jarvis-panel h2 {
+    color: #00eaff;
+    margin-top: 0;
+}
+
+#jarvis-input {
+    width: 90%;
+    padding: 10px;
+    margin-top: 10px;
+    background: #111827;
+    color: white;
+    border: 1px solid #00eaff;
+    border-radius: 8px;
+}
+
+#jarvis-panel button {
+    margin-top: 10px;
+    padding: 9px 15px;
+    background: #00eaff;
+    color: #001018;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+</style>
 </head>
 <body>
   <div class="scanline"></div>
@@ -107,5 +172,51 @@
   <div id="toast"></div>
   <script src="script.js"></script>
   <script src="secret-entrance.js"></script>
+  <!-- JARVIS AI -->
+<div id="jarvis-ai">
+    <button id="jarvis-button" onclick="toggleJarvis()">🤖 JARVIS</button>
+
+    <div id="jarvis-panel">
+        <h2>JARVIS AI</h2>
+        <p id="jarvis-response">What can I help you with?</p>
+
+        <input
+            type="text"
+            id="jarvis-input"
+            placeholder="Ask JARVIS..."
+            onkeydown="if(event.key==='Enter') askJarvis()"
+        >
+
+        <button onclick="askJarvis()">Ask</button>
+    </div>
+</div>
+
+<script>
+function toggleJarvis() {
+    const panel = document.getElementById("jarvis-panel");
+    panel.style.display =
+        panel.style.display === "block" ? "none" : "block";
+}
+
+function askJarvis() {
+    const input = document.getElementById("jarvis-input");
+    const response = document.getElementById("jarvis-response");
+
+    const question = input.value.toLowerCase();
+
+    if (question.includes("hello") || question.includes("hi")) {
+        response.textContent = "Hello. JARVIS online. 🫡";
+    } else if (question.includes("minecraft")) {
+        response.textContent = "Minecraft detected. Excellent choice. ⛏️";
+    } else if (question.includes("fortnite")) {
+        response.textContent = "Fortnite mode activated. 🎮";
+    } else {
+        response.textContent =
+            "I'm still learning. My actual AI brain is coming soon. 🤖";
+    }
+
+    input.value = "";
+}
+</script>
 </body>
 </html>
