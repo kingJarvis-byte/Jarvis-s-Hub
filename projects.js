@@ -1,0 +1,3 @@
+const filters=document.querySelectorAll(".filter"),cards=document.querySelectorAll(".project-card");
+filters.forEach(f=>f.addEventListener("click",()=>{filters.forEach(x=>x.classList.remove("active"));f.classList.add("active");const v=f.dataset.filter;cards.forEach(c=>c.style.display=v==="all"||c.dataset.status===v?"flex":"none")}));
+document.querySelector(".planned-button").onclick=()=>document.getElementById("terminalText").innerHTML="> REQUEST RECEIVED<br>> PROJECT: JARVIS DESKTOP<br>> STATUS: PLANNED<br>> BUILD NOT YET DEPLOYED_";
