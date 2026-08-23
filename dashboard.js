@@ -1,0 +1,5 @@
+const start=Date.now();
+const pad=n=>String(n).padStart(2,"0");
+setInterval(()=>{let s=Math.floor((Date.now()-start)/1000);document.getElementById("uptime").textContent=`${pad(Math.floor(s/3600))}:${pad(Math.floor(s/60)%60)}:${pad(s%60)}`},1000);
+const btn=document.getElementById("scan"),bar=document.getElementById("scanBar"),text=document.getElementById("scanText"),log=document.getElementById("scanLog");
+btn.onclick=()=>{btn.disabled=true;bar.style.width="0";text.textContent="Running diagnostics...";let steps=["Checking Hub...","Checking Music System...","Checking Soundboard...","Checking JARVIS AI...","Checking Project System...","All systems operational."];let i=0;let timer=setInterval(()=>{bar.style.width=((i+1)/steps.length*100)+"%";log.innerHTML="> "+steps[i].toUpperCase()+"<br>"+(i===steps.length-1?"> DIAGNOSTIC COMPLETE_":"> CHECK PASSED_");i++;if(i===steps.length){clearInterval(timer);text.textContent="SYSTEM SCAN COMPLETE — ALL MODULES ONLINE.";btn.disabled=false}},450)};

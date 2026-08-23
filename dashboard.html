@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>System Dashboard // JARVIS Hub</title>
+<link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+<header>
+<a href="index.html" class="logo">J<span>ARVIS</span></a>
+<div class="system-status"><i></i> SYSTEM MONITOR // ONLINE</div>
+<a href="index.html" class="back">← HUB</a>
+</header>
+
+<main>
+<p class="eyebrow">SYSTEM / 05</p>
+<section class="hero">
+<div><h1>System<br><span>Dashboard</span></h1><p>Live status, diagnostics and useful numbers from the JARVIS Hub.</p></div>
+<div class="live"><i></i> LIVE</div>
+</section>
+
+<section class="stats">
+<div><span>UPTIME</span><strong id="uptime">00:00:00</strong></div>
+<div><span>PROJECTS</span><strong>05</strong></div>
+<div><span>TRACKS</span><strong>05</strong></div>
+<div><span>SYSTEMS</span><strong>05</strong></div>
+</section>
+
+<section class="dashboard-grid">
+<div class="panel">
+<div class="panel-head"><h2>System Status</h2><span>STATUS</span></div>
+<div class="system"><div><b>●</b> JARVIS HUB</div><strong>ONLINE</strong></div>
+<div class="system"><div><b>●</b> MUSIC SYSTEM</div><strong>ONLINE</strong></div>
+<div class="system"><div><b>●</b> SOUNDBOARD</div><strong>ONLINE</strong></div>
+<div class="system"><b>●</b> JARVIS AI <strong>ONLINE</strong></div>
+<div class="system"><div><b>●</b> PROJECT SYSTEM</div><strong>ONLINE</strong></div>
+</div>
+
+<div class="panel diagnostic">
+<div class="panel-head"><h2>Diagnostics</h2><span>READY</span></div>
+<p id="scanText">Run a system scan to check all JARVIS modules.</p>
+<div class="bar"><span id="scanBar"></span></div>
+<button id="scan">RUN SYSTEM SCAN</button>
+<div id="scanLog" class="log">> AWAITING COMMAND_</div>
+</div>
+</section>
+
+<section class="panel">
+<div class="panel-head"><h2>Quick Access</h2><span>MODULES</span></div>
+<div class="quick">
+<a href="projects.html">📁 PROJECTS <span>→</span></a>
+<a href="music.html">🎵 MUSIC <span>→</span></a>
+<a href="ai.html">🤖 JARVIS AI <span>→</span></a>
+<a href="index.html">⌂ HUB <span>→</span></a>
+</div>
+</section>
+</main>
+
+<footer>JARVIS HUB // SYSTEM DASHBOARD</footer>
+<script src="dashboard.js"></script>
+</body>
+</html>
