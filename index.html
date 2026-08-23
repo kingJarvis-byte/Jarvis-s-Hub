@@ -116,7 +116,7 @@
         <p class="tag">03 / MUSIC</p>
         <h2>Music</h2>
         <p>Minimal Threat, songs, recordings and musical experiments.</p>
-        <button>OPEN →</button>
+        <a href="music.html"><button>OPEN →</button></a>
       </article>
 
       <article class="panel feature" data-page="projects">
@@ -172,24 +172,7 @@
   <div id="toast"></div>
   <script src="script.js"></script>
   <script src="secret-entrance.js"></script>
-  <!-- JARVIS AI -->
-<div id="jarvis-ai">
-    <button id="jarvis-button" onclick="toggleJarvis()">🤖 JARVIS</button>
 
-    <div id="jarvis-panel">
-        <h2>JARVIS AI</h2>
-        <p id="jarvis-response">What can I help you with?</p>
-
-        <input
-            type="text"
-            id="jarvis-input"
-            placeholder="Ask JARVIS..."
-            onkeydown="if(event.key==='Enter') askJarvis()"
-        >
-
-        <button onclick="askJarvis()">Ask</button>
-    </div>
-</div>
 
 <script>
 function toggleJarvis() {
